@@ -1,7 +1,7 @@
 Welcome  
 
 ## 我的程序項目
-- [程式競賽技巧整理](https://dinlon5566.github.io/Competitive-programming)
+- [程式競賽技巧](https://dinlon5566.github.io/Competitive-programming)
 - [Github資源蒐集整理](https://github.com/Dinlon5566/the-useful-github-resources)
 - [刷題記錄](https://github.com/Dinlon5566/Problem-solving)
 - [病毒研究(暫時停止)](https://github.com/Dinlon5566/VirusStrategy)
