@@ -1,3 +1,5 @@
+<head>
+    <title>測試頁</title>
 <script type="text/javascript">
         window.onblur = function() {
             document.title = "你已經離開了";
@@ -6,6 +8,8 @@
             document.title = "你已經回來了";
         };
     </script>
+</head>
+<body>
 這裡在開發中...沒什麼東西可以看
 
 ## 測試
@@ -17,3 +21,4 @@
 ## html
 <h1>test</h1><br>
 <a href="https://www.youtube.com/">YT</a><br>
+</body>
