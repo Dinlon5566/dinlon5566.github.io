@@ -38,6 +38,7 @@ Welcome
 
 ## 推薦的網站
 - [Confetto](https://nanahira.jp/) 最可愛的歌手ななひら <3
+- [信任的演化](https://dinlon5566.github.io/trust-zh-TW/) 關於合作博弈論的小遊戲
 
 ## 外部網站
 - [IG](https://www.instagram.com/dinlon5566/)
