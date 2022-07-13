@@ -40,6 +40,9 @@ Welcome
 - [Confetto](https://nanahira.jp/) 最可愛的歌手ななひら <3
 - [信任的演化](https://dinlon5566.github.io/trust-zh-TW/) 關於合作博弈論的小遊戲
 
+## 你可能有興趣的
+- [程式代寫](https://dinlon5566.github.io/file/ghostwriting.md) 我來幫你寫程式 OwO/
+
 ## 外部網站
 - [IG](https://www.instagram.com/dinlon5566/)
 - [PIXIV](https://www.pixiv.net/users/40217129)
