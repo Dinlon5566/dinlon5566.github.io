@@ -44,7 +44,7 @@ Welcome
 
 ## 你可能有興趣的
 
-- [程式代寫](https://dinlon5566.github.io/ghostwriting/index.md) 我來幫你寫程式 OwO/
+- [程式代寫](https://dinlon5566.github.io/file/ghostwriting) 我來幫你寫程式 OwO/
 
 ## 外部網站
 
