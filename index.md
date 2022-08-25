@@ -40,6 +40,7 @@ Welcome
 ## 推薦的網站
 
 - [Confetto](https://nanahira.jp/) 最可愛的歌手ななひら <3
+- [Eat Nanahira](https://dinlon5566.github.io/EatNanahira/) ななひら小遊戲
 - [信任的演化](https://dinlon5566.github.io/trust-zh-TW/) 關於合作博弈論的小遊戲
 
 ## 你可能有興趣的
