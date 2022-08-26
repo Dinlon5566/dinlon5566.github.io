@@ -1,13 +1,6 @@
 <head>
     <title>測試頁</title>
-<script type="text/javascript">
-        window.onblur = function() {
-            document.title = "你已經離開了";
-        };
-        window.onfocus = function() {
-            document.title = "你已經回來了";
-        };
-    </script>
+
 </head>
 <body>
 這裡在開發中...沒什麼東西可以看
