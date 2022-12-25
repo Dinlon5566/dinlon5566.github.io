@@ -11,7 +11,9 @@
 
 </head>
 
-Welcome
+Welcome  
+喜歡研究各種玩意，任何事情都想要會一些。
+
 
 ## 我的程序項目
 
@@ -19,6 +21,7 @@ Welcome
 - [Github 資源蒐集整理](https://github.com/Dinlon5566/the-useful-github-resources)
 - [刷題記錄](https://github.com/Dinlon5566/Problem-solving)
 - [病毒研究](https://github.com/Dinlon5566/VirusStrategy)
+- [我逆向你逆向我的逆向工程膩](https://ithelp.ithome.com.tw/users/20135675/ironman/5800) 獲 2022年 iThome鐵人賽 佳作。 
 
 ## 推薦的網站
 
@@ -36,3 +39,5 @@ Welcome
 - [IG](https://www.instagram.com/dinlon5566/)
 - [PIXIV](https://www.pixiv.net/users/40217129)
 - [巴哈小屋](https://home.gamer.com.tw/homeindex.php?owner=ton200168)
+- [個人伺服器](https://ams.dinlon5566.com/)
+- [Discord](https://discord.gg/UE687NvTcD)
