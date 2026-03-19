@@ -28,7 +28,7 @@ body {
     color: #4c4948;
     font-size: 14px;
     font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, "Microsoft JhengHei", "MicrMicrosoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif;
-    line-height: 2;
+    line-height: 1.75;
     margin: 0;
 }
 
@@ -64,6 +64,13 @@ a {
     /*cursor: url(), auto;*/
 }
 
+a:focus-visible {
+    outline: 2px solid #1d4ed8;
+    outline-offset: 2px;
+    border-radius: 2px;
+    text-decoration: underline;
+}
+
 .tool a {
     color: #0071cd;
 }
@@ -79,12 +86,13 @@ box-flex: 1;
 flex: 1 auto;     
 -webkit-box-orient: vertical;
 flex-direction: column;
+min-height: 100vh;
 }
 
 #nav.not_index_bg {
-    height: 30rem;
+    height: clamp(18rem, 44vh, 30rem);
     width: 100%;
-    background-image: url(https://www.loliapi.com/acg/);
+    background-image: linear-gradient(rgba(0, 0, 0, .22), rgba(0, 0, 0, .22)), url(https://www.loliapi.com/acg/);
 }
 
 #nav {
@@ -99,7 +107,8 @@ flex-direction: column;
 
 #page_site-info {
     position: absolute;
-    top: 15rem;
+    top: 50%;
+    transform: translateY(-50%);
     width: 100%;
 }
 
@@ -110,7 +119,6 @@ flex-direction: column;
     line-height: 1.5;
     font-weight: 700;
     font-size: 1.7rem;
-    animation: titlescale 1s;
 }
 
 main {
@@ -153,7 +161,11 @@ img {
 }
 
 .avatar-img {
-    animation: avatar_turn_around 2s linear infinite;
+    transition: transform .6s ease;
+}
+
+.avatar-img:hover {
+    transform: rotate(360deg);
 }
 
 
@@ -173,6 +185,15 @@ img {
 
 #page {
     padding: 20px 44px 44px;
+}
+
+#page ul {
+    padding-left: 1.4rem;
+}
+
+#page li {
+    margin-bottom: .55rem;
+    padding-left: .2rem;
 }
 
 
@@ -265,12 +286,16 @@ img {
 }
 
 footer {
-    height: 5vh;
+    min-height: 3.5rem;
     color: #081E26;
     background-color: #98d3d3;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: .3rem .5rem;
+    padding: .5rem .75rem;
+    text-align: center;
 }
 
 footer a {
@@ -278,6 +303,10 @@ footer a {
     margin-left: 5px;
     justify-content: right;
     text-decoration: none;
+}
+
+#aside_content .card-info .card-info-social-icons .social-icon:focus-visible {
+    outline-offset: 4px;
 }
 
 @media screen and (min-width: 768px) {
@@ -290,9 +319,15 @@ footer a {
     .layout_page {
         padding: 0 5px !important;
     }
+    #nav.not_index_bg {
+        height: clamp(14rem, 35vh, 20rem);
+    }
     #page {
         margin: 0;
         padding: 1.8rem 1.3rem;
+    }
+    #page ul {
+        padding-left: 1.55rem;
     }
 }
 
@@ -302,6 +337,9 @@ footer a {
     }
     #aside_content {
         width: 100% !important;
+    }
+    #aside_content .card-webinfo {
+        display: none;
     }
     .layout_page {
         -webkit-box-orient: vertical;
@@ -325,10 +363,22 @@ footer a {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to right, #FF0066 0%, #FF00CC 100%);
-    width: 85%
+    background: linear-gradient(to bottom, #6f8179 0%, #8ea39a 100%);
+    width: 85%;
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #5f726a 0%, #7f948b 100%);
 }
 
 ::-webkit-scrollbar-track {
     background-color: transparent
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+    }
 }

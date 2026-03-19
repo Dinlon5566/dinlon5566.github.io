@@ -3,8 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dinlon小屋</title>
     <meta name="description" content="這裡是Dinlon5566的個人網頁，放一些有趣的小東西">
+    <link rel="canonical" href="https://dinlon5566.com/">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dinlon小屋">
+    <meta property="og:description" content="這裡是Dinlon5566的個人網頁，放一些有趣的小東西">
+    <meta property="og:url" content="https://dinlon5566.com/">
+    <meta property="og:image" content="https://dinlon5566.com/static/img/abgxi-747lz.png">
     <meta name="keywords" content="Dinlon5566,blog">
     <meta name="format-detection" content="telephone=no">
     <link rel="shortcut icon" href="favicon.ico">
@@ -41,14 +49,20 @@
                     <span class="blogtitle"></span>
                     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
                     <script>
-                        var typed = new Typed(".blogtitle", {
-                            strings: ['歡迎來到Dinlon小屋!', 'Welcome to Dinlon5566\'s Server!'],
-                            startDelay: 300,
-                            typeSpeed: 100,
-                            loop: true,
-                            backSpeed: 50,
-                            showCursor: true
-                        });
+                        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+                        const blogTitle = document.querySelector(".blogtitle");
+                        if (prefersReducedMotion) {
+                            blogTitle.textContent = "歡迎來到Dinlon小屋!";
+                        } else {
+                            new Typed(".blogtitle", {
+                                strings: ["歡迎來到Dinlon小屋!", "Welcome to Dinlon5566's Server!"],
+                                startDelay: 300,
+                                typeSpeed: 100,
+                                loop: true,
+                                backSpeed: 50,
+                                showCursor: true
+                            });
+                        }
                     </script>
                 </div>
             </div>
@@ -70,11 +84,11 @@
                             <!-- 社交平台連結 -->
                             <div class="card-info-social-icons is-center">
 
-                                <a class="social-icon" href="https://github.com/dinlon5566" target="_blank">
+                                <a class="social-icon" href="https://github.com/dinlon5566" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                                     <i class="fa fa-github"></i>
                                 </a>
 
-                                <a class="social-icon" href="https://www.instagram.com/dinlon5566/" target="_blank">
+                                <a class="social-icon" href="https://www.instagram.com/dinlon5566/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                     <i class="fa fa-instagram"></i>
                                 </a>
 
@@ -117,8 +131,7 @@
                                 <span>網站訊息</span>
                             </div>
                             <div class="webinfo">
-                                <p> 寫了一些技術文章，可以到部落格看看 OwO/ </p>
-                                </p>
+                                <p> 這個站竟然已經五年了 OwO<br>做了一些小整理，期待下一個五年 </p>
                             </div>
 
                         </div>
@@ -155,11 +168,6 @@
                                     <a href="https://dinlon5566.com/web-pentest-quickref/">網頁滲透測試快速參考工具
                                     </a> 一些PT時常用的指令集合
                                 </li>
-                                <!-- 隱藏目錄，欸嘿
-                                 <li>
-                                    <a href="https://dinlon5566.notion.site/HTBA-aba0d76f76fc4167b5c9d930ab8759d4"> 我在 HTB Academy 學習時做的簡略筆記 </li>
-                                    </li>
-                                -->
                             </ul>
                             <hr>
                         </div>
@@ -200,37 +208,38 @@
 
 
     <script type="text/javascript">
+        const baseTitle = "Dinlon小屋";
         window.onblur = function () {
-            document.title = "OwO   " + document.title;
+            document.title = "OwO   " + baseTitle;
         };
         window.onfocus = function () {
-            document.title = "Dinlon小屋";
+            document.title = baseTitle;
         };
     </script>
-
-</body>
     <!-- Vanta.js background-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 
     <script>
-        VANTA.NET({
-            el: "html",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0xe3e3e3,
-            backgroundColor: 0x7b8780,
-            points: 12.00,
-            maxDistance: 18.00,
-            spacing: 14.00,
-
-        })
+        const prefersReducedMotionForBackground = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!prefersReducedMotionForBackground && window.VANTA && typeof VANTA.NET === "function") {
+            VANTA.NET({
+                el: "html",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0xe3e3e3,
+                backgroundColor: 0x7b8780,
+                points: 12.00,
+                maxDistance: 18.00,
+                spacing: 14.00
+            });
+        }
     </script>
 
+</body>
 </html>

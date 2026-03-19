@@ -3,14 +3,93 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>個人經歷</title>
+    <meta name="description" content="Dinlon 的個人經歷、技能與資安相關競賽和研究紀錄。">
+    <link rel="canonical" href="https://dinlon5566.com/about/aboutme.html">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="個人經歷">
+    <meta property="og:description" content="Dinlon 的個人經歷、技能與資安相關競賽和研究紀錄。">
+    <meta property="og:url" content="https://dinlon5566.com/about/aboutme.html">
+    <meta property="og:image" content="https://dinlon5566.com/static/img/abgxi-747lz.png">
     <link rel="stylesheet" href="/static/css/style.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, "Microsoft JhengHei", "MicrMicrosoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif;
+            line-height: 1.75;
             color: #333;
-            margin: 20px;
+            margin: 0;
+            padding: 20px 16px;
+            background: linear-gradient(180deg, #d8e0dc 0%, #c9d2cd 55%, #bdc7c1 100%);
+        }
+
+        .about-layout {
+            max-width: 1260px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
+            gap: 18px;
+            align-items: start;
+        }
+
+        .toc-panel {
+            position: sticky;
+            top: 16px;
+            max-height: calc(100vh - 32px);
+            overflow: auto;
+            padding: 14px 12px;
+            background: rgba(241, 246, 243, .9);
+            border: 1px solid rgba(94, 113, 104, .22);
+            border-radius: 8px;
+            box-shadow: 0 8px 18px rgba(27, 39, 35, .1);
+        }
+
+        .toc-title {
+            margin: 0 0 8px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #275842;
+        }
+
+        .toc-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .toc-item+.toc-item {
+            margin-top: 4px;
+        }
+
+        .toc-item.is-sub {
+            padding-left: 14px;
+        }
+
+        .toc-link {
+            display: block;
+            padding: 4px 6px;
+            border-radius: 6px;
+            color: #25567b;
+            font-size: .95rem;
+            line-height: 1.35;
+            text-decoration: none;
+        }
+
+        .toc-link:hover {
+            background: rgba(34, 85, 124, .12);
+            text-decoration: none;
+        }
+
+        .page-shell {
+            max-width: none;
+            margin: 0;
+            width: 100%;
+            padding: 28px 32px;
+            background: rgba(248, 251, 249, .93);
+            border-radius: 8px;
+            border: 1px solid rgba(94, 113, 104, .22);
+            box-shadow: 0 10px 24px rgba(27, 39, 35, .12);
         }
 
         h1 {
@@ -72,11 +151,71 @@
         .bold {
             font-weight: bold;
         }
+
+        #about-content h2,
+        #about-content h3 {
+            scroll-margin-top: 16px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .about-layout {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .toc-panel {
+                position: static;
+                max-height: none;
+            }
+
+            .toc-list {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 4px 10px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .toc-panel {
+                display: none;
+            }
+
+            .page-shell {
+                padding: 20px 16px;
+            }
+
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            p,
+            ul {
+                margin-left: 12px;
+            }
+        }
     </style>
 
 </head>
 
 <body>
+    <div class="about-layout">
+    <aside class="toc-panel" aria-label="頁面目錄">
+        <p class="toc-title">頁面目錄</p>
+        <ul class="toc-list" id="toc-list"></ul>
+    </aside>
+    <main class="page-shell" id="about-content">
     <h1>個人經歷</h1>
 
     <div class="contact-info">
@@ -89,11 +228,13 @@
             <!-- | 簡歷：<a href="https://dinlon5566.com/about/Resume-zh.pdf">下載</a> 現在還不需要找XD -->
         </p>
     </div>
-    你好 OwO/ <br>
-    我目前在開啟資安進行惡意程式分析與威脅情資工作。<br>
-    我熱衷於探索最新的安全技術，並積極參與各類資安競賽與研究專案。 <br>
-    您可以在這裡了解我的教育經歷、技術專長、競賽成就以及一些參與的各種研討會和社群活動。 <br>
-    無論您是資安領域的專業人士，還是對資訊安全有興趣的朋友，都歡迎您與我交流。 <br>
+    <p>
+        你好 OwO/ <br>
+        我目前在開啟資安 OIS 進行惡意程式分析與威脅情資工作。<br>
+        我熱衷於探索最新的安全技術，並積極參與各類資安競賽與研究專案。<br>
+        您可以在這裡了解我的教育經歷、技術專長、競賽成就以及一些參與的各種研討會和社群活動。<br>
+        無論您是資安領域的專業人士，還是對資訊安全有興趣的朋友，都歡迎您與我交流。
+    </p>
     
     <!-- 
     其實我也不確定那些被漏掉了，盡量補上 XD
@@ -101,14 +242,14 @@
     <h2>教育背景</h2>
     <ul>
         <li>私立輔仁大學 資訊工程學系 學士（2019~2023）</li>
-        <li>國立中興大學 資訊工程學系 資訊安全實驗室 研究生（2023~2025）</li>
+        <li>國立中興大學 資訊工程學系 資訊安全實驗室 碩士（2023~2025）</li>
     </ul>
 
     <h2>技能與認證</h2>
     <ul>
         <li><strong>程式語言：</strong> C / C++, IA-32 , Python , PHP</li>
-        <li><strong>工具與框架：</strong> Kali Linux, Wireshark, Metasploit, AWS EC2 </li>
-        <li><strong>技術領域：</strong> 量子密碼學,網路安全, 滲透測試, 同態加密, 暗網情資</li>
+        <li><strong>工具與框架：</strong> Kali Linux, Flare-VM, Remnux, IDA Pro,  </li>
+        <li><strong>技術領域：</strong> 惡意程式分析, SOC, 滲透測試, 量子密碼學,暗網情資, 同態加密</li>
         <li><strong>證照：</strong>
             <ul>
                 <li>iPAS 初級資訊安全工程師</li>
@@ -176,7 +317,9 @@
         <li>2022/2023/2024/2025 台灣資安大會</li>
         <li>2021/2022 SEMICON Taiwan 國際半導體展</li>
         <li>2023 第二屆 PQC 標準化與遷移研討會</li>
-        <li>2023/2024 HITCON CMT 研討會</li>
+        <li>2023/2024/2025 HITCON CMT 研討會</li>
+        <li>2025 TeamT5 Threat Analyst Summit</li>
+        <li>2026 Devcore Conference</li>
     </ul>
 
     <h2>教學與助教經驗</h2>
@@ -199,7 +342,7 @@
     <ul>
         <li>私立天主教輔仁大學 NISRA 資安社團 社員</li>
         <li>中華民國博物館學會 學生會員</li>
-        <li><a href="https://hacker.org.tw/member_id/a480c479-0c5a-4159-bdff-4598a5da2eba.pdf">台灣駭客協會 學生會員</a> </li>
+        <li><a href="https://hacker.org.tw/member_id/a480c479-0c5a-4159-bdff-4598a5da2eba.pdf">台灣駭客協會 個人會員</a> </li>
     </ul>
 
     <h2>研究與專案經驗</h2>
@@ -227,6 +370,7 @@
                 <li>我會在這裡發表一些資安相關或不相關的各種文章</li>
                 <li><a href="https://blog.dinlon5566.com">部落格連結</a></li>
             </ul>
+        </li>
     </ul>
 
 
@@ -237,6 +381,34 @@
         <li>LinkedIn：<a href="https://www.linkedin.com/in/%E9%9D%99%E6%9E%9D-%E5%B0%8F%E6%9E%97-278a77115/">LinkedIn</a>
         </li>
     </ul>
+    </main>
+    </div>
+
+    <script>
+        (() => {
+            const content = document.getElementById("about-content");
+            const tocList = document.getElementById("toc-list");
+            if (!content || !tocList) return;
+
+            const headings = content.querySelectorAll("h2");
+            headings.forEach((heading, index) => {
+                if (!heading.id) {
+                    heading.id = `section-${index + 1}`;
+                }
+
+                const item = document.createElement("li");
+                item.className = heading.tagName === "H3" ? "toc-item is-sub" : "toc-item";
+
+                const link = document.createElement("a");
+                link.className = "toc-link";
+                link.href = `#${heading.id}`;
+                link.textContent = heading.textContent.trim();
+
+                item.appendChild(link);
+                tocList.appendChild(item);
+            });
+        })();
+    </script>
 
 </body>
 

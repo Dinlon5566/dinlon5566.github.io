@@ -3,7 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>信箱</title>
+    <meta name="description" content="一般訊息與機密訊息聯絡方式，含 GPG 金鑰與加密通報流程。">
+    <link rel="canonical" href="https://dinlon5566.com/function/mailBox/">
     <link rel="stylesheet" href="/static/css/style.css">
     <style>
         .Secret_Message {
@@ -35,7 +38,7 @@
 
         }
 
-        li {
+        .pgp-tools li {
             font-size: 15px;
             margin: 10px 0;
             margin-left: 60px;
@@ -56,15 +59,17 @@
         <p>1. 下載GPG key : <a href="/Download/dinlon5566_0x371536C9_public.asc">Dinlon5566_public_key.asc</a><br>
             2. 用支援pgp的軟體匯入key<br></p>
 
-        <li>
-            Win : <a href="https://www.gpg4win.org/"> Gpg4win</a>
-        </li>
-        <li>
-            Mac : <a href="https://gpgtools.org/">GPGTools</a>
-        </li>
-        <li>
-            Linux : <a href="https://www.gnupg.org/download/index.html">GnuPG</a>
-        </li>
+        <ul class="pgp-tools">
+            <li>
+                Win : <a href="https://www.gpg4win.org/"> Gpg4win</a>
+            </li>
+            <li>
+                Mac : <a href="https://gpgtools.org/">GPGTools</a>
+            </li>
+            <li>
+                Linux : <a href="https://www.gnupg.org/download/index.html">GnuPG</a>
+            </li>
+        </ul>
 
         <p>
             3. 加密軟體與GPG Key 進行檔案加密<br>
